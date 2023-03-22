@@ -1,0 +1,103 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #283140;
+    border-bottom: 2px solid #72808f;
+  }
+  .navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 2rem;
+  }
+  .navbar ul li a::selection {
+    color: rgb(255, 65, 65);
+  }
+  .navbar ul li a:focus {
+    color: white;
+  }
+  .navbar ul li {
+    list-style: none;
+    padding: 1rem;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    color: rgb(207, 207, 207);
+}
+.navbar ul li a:hover {
+    color: white;
+    transition: .2s;
+}
+#logo {
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  color: white;
+  cursor: pointer;
+}
+#handburger {
+  display: none;
+  color: white;
+}
+#logout {
+  background-color: #465666;
+}
+@media(max-width: 768px){
+    .navbar {
+      flex-direction: column;
+      justify-content: center;
+    }
+    #logo {
+      margin: 0;
+      padding-top: .5rem;
+    }
+    #logout {
+      background-color: rgba(rgb(12, 70, 109. 0.5));
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      border-radius: 5rem;
+      border: 2px solid #72808f;
+      padding: .5rem 1rem;
+    }
+  }
+  @media(max-width: 578px){
+    .navbar ul {
+      flex-direction: column;
+      margin: 0;
+      text-align: center;
+    }
+    .navbar ul li {
+      padding: .5rem;
+    }
+    .navbar ul.active {
+      display: none;
+    }
+    #handburger {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: .5rem;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+    #logo {
+      margin: 0;
+      padding: .5rem;
+    }
+    #logout {
+      position: initial;
+      background-color: transparent;
+    }
+    .navbar ul li {
+      border-bottom: 1px solid #72808f;
+    }
+    @media(max-width: 578px){
+      #logout {
+        padding-bottom: 1rem;
+        border: none;
+      }
+    }
+  }

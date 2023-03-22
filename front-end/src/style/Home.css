@@ -1,0 +1,7 @@
+.container {
+    text-align: center;
+    border: 1px dotted black;
+    width: 400px;
+    height: 500px;
+    background-color: pink;
+}
