@@ -22,19 +22,19 @@ function Navbar() {
   return (
     <div className="navbar">
       <RiShoppingBag3Fill id="logo" onClick={()=>navigate('/')} />
-      <TiThMenu id="handburger" onClick={toggleAction} />
+      {/* <TiThMenu id="handburger" onClick={toggleAction} /> */}
       {auth ? 
         <ul className={isActive ? 'active': ""}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/product">Product List</Link></li>
           <li><Link to="/add-product">Add Product</Link></li>
-          <li id="logout"><Link onClick={logOut} to="/signup">Logout</Link></li>
+          <li id="logout"><Link onClick={logOut} to="/login">Logout</Link></li>
           {/* <li id="name">-{JSON.parse(auth).name}</li> */}
         </ul>
        : 
-        <ul>
-          <li><Link to="/signup">SignUp</Link></li>
-          <li><Link to="/login">Login</Link></li>
+        <ul id="login-signup" className={isActive ? 'active': ""}>
+          <li><Link to="/signup">Sign up</Link></li>
+          <li id="login"><Link to="/login">Login</Link></li>
         </ul>
       }
     </div>

@@ -1,9 +1,119 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+}
+#logo {
+  color: white;
+  font-size: 2rem;
+  margin-inline-start: 1rem;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li {
+  list-style: none;
+  padding: 1rem;
+}
+.navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  transform: scale(0);
+  transform-origin: right;
+  background-color: black;
+  border-radius: 5px;
+  transition: transform .3s;
+}
+.navbar ul li a:hover::after {
+  transform-origin: left;
+  transform: scale(1);
+}
+#login-signup {
+  margin-inline-end: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #283140;
-    border-bottom: 2px solid #72808f;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
   }
   .navbar ul {
     display: flex;
@@ -14,9 +124,6 @@
   .navbar ul li a::selection {
     color: rgb(255, 65, 65);
   }
-  .navbar ul li a:focus {
-    color: white;
-  }
   .navbar ul li {
     list-style: none;
     padding: 1rem;
@@ -25,9 +132,9 @@
     text-decoration: none;
     display: block;
     cursor: pointer;
-    color: rgb(207, 207, 207);
 }
-.navbar ul li a:hover {
+.navbar ul li a:hover,
+.navbar ul li a:focus {
     color: white;
     transition: .2s;
 }
@@ -40,9 +147,6 @@
 #handburger {
   display: none;
   color: white;
-}
-#logout {
-  background-color: #465666;
 }
 @media(max-width: 768px){
     .navbar {
@@ -78,7 +182,7 @@
     #handburger {
       display: block;
       position: absolute;
-      top: 1rem;
+      top: .6rem;
       right: .5rem;
       font-size: 1.5rem;
       margin-right: 1rem;
@@ -94,10 +198,14 @@
     .navbar ul li {
       border-bottom: 1px solid #72808f;
     }
+    #login {
+      border: none;
+      margin-bottom: .5rem;
+    }
     @media(max-width: 578px){
       #logout {
         padding-bottom: 1rem;
         border: none;
       }
     }
-  }
+  } */
